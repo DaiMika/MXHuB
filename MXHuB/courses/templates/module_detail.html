@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>{{ module.title }}</h1>
+    <p>{{ module.content }}</p>
+    <h2>Quiz Questions</h2>
+    <ul>
+        {% for quiz in module.quizzes.all %}
+            <li>{{ quiz.question }} - Answer: {{ quiz.answer }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

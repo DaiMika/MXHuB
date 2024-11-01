@@ -1,0 +1,13 @@
+<!-- module_detail.html -->
+{% extends "base.html" %}
+{% block content %}
+    <h2>{{ module.title }}</h2>
+    <p>{{ module.content }}</p>
+    <h3>Quiz</h3>
+    <ul>
+        {% for quiz in module.quizzes.all %}
+            <li>{{ quiz.question }} - Answer: {{ quiz.answer }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
